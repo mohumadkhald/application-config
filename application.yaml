@@ -82,7 +82,7 @@ spring:
     init:
       schema-locations: classpath*:db/mysql/schema.sql
       data-locations: classpath*:db/mysql/data.sql
-      init: ALWAYS
+      mode: ALWAYS
 
 ---
 spring:
@@ -100,4 +100,4 @@ spring:
     init:
       schema-locations: classpath*:db/postgresql/schema.sql
       data-locations: classpath*:db/postgresql/data.sql
-      init: ALWAYS
+      mode: ALWAYS
