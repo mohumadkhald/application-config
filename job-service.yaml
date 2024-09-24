@@ -6,6 +6,9 @@ eureka:
   instance:
     # enable to register multiple app instances with a random server port
     instance-id: ${spring.application.name}:${random.uuid}
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456Ax@dlocalhost:8761/eureka/
 
 ---
 spring:

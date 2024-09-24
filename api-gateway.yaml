@@ -17,6 +17,10 @@ server:
 # Internationalization
 spring.messages.basename: messages/messages
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456Ax@dlocalhost:8761/eureka/
 ---
 spring:
   config:
