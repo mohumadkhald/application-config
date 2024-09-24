@@ -126,6 +126,11 @@ spring:
       schema-locations: classpath*:db/mysql/schema.sql
       data-locations: classpath*:db/mysql/data.sql
       mode: ALWAYS
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
 ---
 spring:
   config:
