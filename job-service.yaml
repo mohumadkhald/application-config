@@ -31,15 +31,6 @@ management:
   zipkin: 
     tracing: 
       endpoint: http://tracing-server:9411/api/v2/spans
-  datasource:
-    url: jdbc:mariadb://mydb-mariadb:3306?useSSL=false
-    username: root
-    password: root
-  sql:
-    init:
-      schema-locations: classpath*:db/mysql/schema.sql
-      data-locations: classpath*:db/mysql/data.sql
-      mode: ALWAYS
 
 server:
   port: 8081
