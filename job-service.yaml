@@ -24,8 +24,13 @@ spring:
   config:
     activate:
       on-profile: docker
-  zipkin:
-    baseUrl: http://tracing-server:9411
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin: 
+    tracing: 
+      endpoint: http://tracing-server:9411/api/v2/spans
   datasource:
     url: jdbc:mariadb://mydb-mariadb:3306?useSSL=false
     username: root
