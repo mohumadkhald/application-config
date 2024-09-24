@@ -91,7 +91,7 @@ spring:
       mode: ALWAYS
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
 ---
 spring:
@@ -128,7 +128,7 @@ spring:
       mode: ALWAYS
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
 
 ---
