@@ -20,4 +20,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:123456Ax@discovery-server:8761/eureka
+    defaultZone: http://admin:123456Ax@discovery-server:8761/eureka
+
+
+
