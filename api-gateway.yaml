@@ -5,7 +5,6 @@ zuul:
     vets-service: jobs/**
     visits-service: companies/**
     review-service: reviews/**
-    api-gateway: gateway/**
     discovery-server : eureka/web
 server:
   port: 8080
