@@ -1,0 +1,12 @@
+server:
+  port: 9090
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456Ax@discovery-server:8761/eureka/
