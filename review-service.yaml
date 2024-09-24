@@ -26,8 +26,8 @@ management:
 ---
 spring:
   rabbitmq:
-  host: rabbitmq
-  port: 15672
+  host: localhost
+  port: 5672
   username: guest
   password: guest
   config:
@@ -41,7 +41,7 @@ management:
   zipkin:
     tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
-
+      
 server:
   port: 8083
 eureka:
