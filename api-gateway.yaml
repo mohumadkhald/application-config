@@ -1,11 +1,11 @@
 zuul:
-  # prefix: /
+  prefix: /
   ignoredServices: '*'
   routes:
-    vets-service: /jobs/**
-    visits-service: /companies/**
-    review-service: /reviews/**
-    api-gateway: /gateway/**
+    vets-service: jobs/**
+    visits-service: companies/**
+    review-service: reviews/**
+    api-gateway: gateway/**
 
 server:
   port: 8080
