@@ -79,13 +79,13 @@ chaos:
 spring:
   config:
     activate:
-      on-profile: postgres
+      on-profile: mysql
   datasource:
-    url: jdbc:postgresql://localhost:5432/app
-    username: admin
-    password: admin
+    url: jdbc:mariadb://localhost:3306/inventory_service
+    username: root
+    password: root
   sql:
     init:
-      schema-locations: classpath*:db/postgres/schema.sql
-      data-locations: classpath*:db/postgres/data.sql
+      schema-locations: classpath*:db/mysql/schema.sql
+      data-locations: classpath*:db/mysql/data.sql
       init: ALWAYS
