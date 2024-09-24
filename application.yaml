@@ -84,17 +84,15 @@ spring:
     url: jdbc:mariadb://mydb-mariadb:3306?useSSL=false
     username: root
     password: root
-  jpa: 
-    database: mariadb
-  hibernate:
-    ddl-auto: create-drop
-  generate-ddl: true
-  show-sql: true
   sql:
     init:
       schema-locations: classpath*:db/mysql/schema.sql
       data-locations: classpath*:db/mysql/data.sql
       mode: ALWAYS
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
 ---
 spring:
   config:
