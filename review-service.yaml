@@ -1,7 +1,7 @@
 ﻿spring:
   config:
     activate:
-      on-profile: postgres
+      on-profile: postgres-local
   rabbitmq:
     host: localhost
     port: 5672
