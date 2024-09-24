@@ -27,14 +27,14 @@ spring:
   zipkin:
     baseUrl: http://tracing-server:9411
   datasource:
-    url: jdbc:mariadb://mydb-mariadb:3306/app
+    url: jdbc:mysql://localhost:3306?useSSL=false
     username: root
     password: root
-    driver-class-name: com.mariadb.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
-    show-sql: true
+  sql:
+    init:
+      schema-locations: classpath*:db/mysql/schema.sql
+      data-locations: classpath*:db/mysql/data.sql
+      mode: ALWAYS
 
 server:
   port: 8081
