@@ -95,7 +95,7 @@ spring:
     activate:
       on-profile: postgres
   datasource:
-    url: jdbc:postgresql://localhost:5432/company_service
+    url: jdbc:postgresql://localhost:5432?useSSL=false
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
