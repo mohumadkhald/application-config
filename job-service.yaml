@@ -23,12 +23,26 @@ management:
 spring:
   config:
     activate:
-      on-profile: docker,mysql
+      on-profile: docker
   zipkin:
     baseUrl: http://tracing-server:9411
+  datasource:
+    url: jdbc:mysql://mydb-mariadb:3306/app
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
 server:
   port: 8081
 eureka:
   client:
     serviceUrl:
       defaultZone: http://admin:123456Ax@discovery-server:8761/eureka
+
+
+
+

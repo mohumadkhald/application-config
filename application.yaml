@@ -81,7 +81,7 @@ spring:
     activate:
       on-profile: mysql
   datasource:
-    url: jdbc:mariadb://mydb-mariadb:3306?useSSL=false
+    url: jdbc:mysql://localhost:3306?useSSL=false
     username: root
     password: root
   sql:
@@ -95,7 +95,7 @@ spring:
     activate:
       on-profile: postgres
   datasource:
-    url: jdbc:postgresql://postgres:5432/app
+    url: jdbc:postgresql://localhost:5432/app
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
@@ -106,4 +106,3 @@ spring:
       schema-locations: classpath*:db/postgresql/schema.sql
       data-locations: classpath*:db/postgresql/data.sql
       mode: ALWAYS
-
