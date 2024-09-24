@@ -1,7 +1,12 @@
 ﻿spring:
   config:
     activate:
-      on-profile: default
+      on-profile: postgres
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   instance:
     # enable to register multiple app instances with a random server port
