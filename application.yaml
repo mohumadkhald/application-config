@@ -81,7 +81,7 @@ spring:
     activate:
       on-profile: mysql
   datasource:
-    url: jdbc:mysql://mydb-mariadb:3306?useSSL=false
+    url: jdbc:mariadb://mydb-mariadb:3306?useSSL=false
     username: root
     password: root
   sql:
