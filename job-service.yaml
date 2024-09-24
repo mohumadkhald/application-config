@@ -27,7 +27,7 @@ spring:
   zipkin:
     baseUrl: http://tracing-server:9411
   datasource:
-    url: jdbc:mysql://mydb-mariadb:3306?useSSL=false
+    url: jdbc:mariadb://mydb-mariadb:3306?useSSL=false
     username: root
     password: root
   sql:
