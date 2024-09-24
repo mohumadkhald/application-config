@@ -106,3 +106,35 @@ spring:
       schema-locations: classpath*:db/postgresql/schema.sql
       data-locations: classpath*:db/postgresql/data.sql
       mode: ALWAYS
+---
+spring:
+  config:
+    activate:
+      on-profile: mysql,docker
+  datasource:
+    url: jdbc:mysql://mydb-mariadb:3306?useSSL=false
+    username: root
+    password: root
+  sql:
+    init:
+      schema-locations: classpath*:db/mysql/schema.sql
+      data-locations: classpath*:db/mysql/data.sql
+      mode: ALWAYS
+
+---
+spring:
+  config:
+    activate:
+      on-profile: postgres,docker
+  datasource:
+    url: jdbc:postgresql://postgres:5432/app
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa: 
+    database: postgresql
+  sql:
+    init:
+      schema-locations: classpath*:db/postgresql/schema.sql
+      data-locations: classpath*:db/postgresql/data.sql
+      mode: ALWAYS
