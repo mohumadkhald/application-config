@@ -23,7 +23,7 @@ management:
 spring:
   config:
     activate:
-      on-profile: docker
+      on-profile: mysql,docker
   zipkin:
     baseUrl: http://tracing-server:9411
 server:
