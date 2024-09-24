@@ -29,8 +29,13 @@ spring:
   config:
     activate:
       on-profile: docker
+management:
+  tracing:
+    sampling:
+      probability: 1.0
   zipkin:
-    baseUrl: http://tracing-server:9411
+    tracing:
+      endpoint: http://tracing-server:9411/api/v2/spans
 eureka:
   client:
     serviceUrl:
