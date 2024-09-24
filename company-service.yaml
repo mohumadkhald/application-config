@@ -26,14 +26,15 @@ management:
 
 ---
 spring:
-  rabbitmq:
-  host: rabbitmq
-  port: 15672
-  username: guest
-  password: guest
   config:
     activate:
       on-profile: docker,postgres
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+
 management:
   tracing:
     sampling:
