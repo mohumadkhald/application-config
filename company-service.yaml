@@ -9,7 +9,7 @@ eureka:
 
   client:
     serviceUrl:
-      defaultZone: http://admin:123456Ax@dlocalhost:8761/eureka/
+      defaultZone: http://admin:123456Ax@localhost:8761/eureka
 
 ---
 spring:
