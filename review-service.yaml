@@ -25,6 +25,11 @@ management:
 
 ---
 spring:
+  rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
   config:
     activate:
       on-profile: postgres,docker
