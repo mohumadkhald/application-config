@@ -27,7 +27,7 @@ management:
 spring:
   config:
     activate:
-      on-profile: postgres,docker
+      on-profile: docker,postgres
   rabbitmq:
     host: localhost
     port: 5672
