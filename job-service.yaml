@@ -2,7 +2,7 @@
 ﻿spring:
   config:
     activate:
-      on-profile: mysql
+      on-profile: mysql-local
 eureka:
   instance:
     # enable to register multiple app instances with a random server port
