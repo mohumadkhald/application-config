@@ -33,8 +33,15 @@ spring:
   config:
     activate:
       on-profile: postgres,docker
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
   zipkin:
-    baseUrl: http://tracing-server:9411
+    tracing:
+      endpoint: http://racing-server:9411/api/v2/spans
+      
 server:
   port: 8083
 eureka:
