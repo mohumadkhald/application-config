@@ -103,13 +103,15 @@ spring:
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
-  jpa: 
-    database: postgresql
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
   sql:
     init:
       schema-locations: classpath*:db/postgresql/schema.sql
       data-locations: classpath*:db/postgresql/data.sql
-      mode: INIT
+      mode: ALWAYS
 
 ---
 
@@ -125,10 +127,10 @@ spring:
     init:
       schema-locations: classpath*:db/mysql/schema.sql
       data-locations: classpath*:db/mysql/data.sql
-      mode: INIT
+      mode: ALWAYS
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
 
 ---
@@ -146,4 +148,8 @@ spring:
     init:
       schema-locations: classpath*:db/postgresql/schema.sql
       data-locations: classpath*:db/postgresql/data.sql
-      mode: INIT
+      mode: ALWAYS
+  jpa:
+  hibernate:
+    ddl-auto: create
+  show-sql: true
