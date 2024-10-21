@@ -91,7 +91,7 @@ spring:
       mode: ALWAYS
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
 ---
 spring:
@@ -105,7 +105,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
   sql:
     init:
@@ -130,7 +130,7 @@ spring:
       mode: ALWAYS
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
 
 ---
@@ -151,5 +151,5 @@ spring:
       mode: ALWAYS
   jpa:
   hibernate:
-    ddl-auto: create-drop
+    ddl-auto: update
   show-sql: true
