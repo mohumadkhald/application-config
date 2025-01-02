@@ -63,7 +63,7 @@ management:
 spring:
   config:
     activate:
-      on-profile: chaos-monkey      
+      on-profile: chaos-monkey
 management.endpoint.chaosmonkey.enabled: true
 chaos:
   monkey:
@@ -81,7 +81,8 @@ spring:
     activate:
       on-profile: mysql
   datasource:
-    url: jdbc:mariadb://mydb-mariadb:3306?useSSL=false
+#    if need create db auto remove name of db
+    url: jdbc:mariadb://mydb-mariadb:3306/app?useSSL=false
     username: root
     password: root
   sql:
@@ -103,7 +104,7 @@ spring:
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
-  jpa: 
+  jpa:
     database: postgresql
   sql:
     init:
