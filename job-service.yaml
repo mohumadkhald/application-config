@@ -1,22 +1,48 @@
+resilience4j:
+  circuitbreaker:
+    instances:
+      companyBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        register-health-indicator: true
+        automatic-transition-from-open-to-half-open-enabled: true
+        sliding-window-type: count_based
 
-﻿spring:
+  ratelimiter:
+    instances:
+      companyBreaker:
+        timeoutDuration: 0s
+        limitForPeriod: 200
+        limitRefreshPeriod: 10s
+
+  retry:
+    instances:
+      companyBreaker:
+        max-attempts: 3
+        wait-duration: 5s
+
+spring:
   config:
     activate:
       on-profile: mysql-local
 eureka:
   instance:
-    # enable to register multiple app instances with a random server port
+    # Enable to register multiple app instances with a random server port
     instance-id: ${spring.application.name}:${random.uuid}
   client:
     serviceUrl:
       defaultZone: http://admin:123456Ax@localhost:8761/eureka
-      
+
 management:
   tracing:
     sampling:
       probability: 1.0
-  zipkin: 
-    tracing: 
+  zipkin:
+    tracing:
       endpoint: http://localhost:9411/api/v2/spans
 
 ---
@@ -28,8 +54,8 @@ management:
   tracing:
     sampling:
       probability: 1.0
-  zipkin: 
-    tracing: 
+  zipkin:
+    tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
 
 server:
@@ -38,7 +64,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://admin:123456Ax@discovery-server:8761/eureka
-
-
-
-
