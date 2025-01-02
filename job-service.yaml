@@ -16,7 +16,7 @@ resilience4j:
     instances:
       companyBreaker:
         timeoutDuration: 0s
-        limitForPeriod: 200
+        limitForPeriod: 20
         limitRefreshPeriod: 10s
 
   retry:
